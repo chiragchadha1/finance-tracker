@@ -20,6 +20,11 @@ app.get('/', (req, res) => {
   res.send('Hello from Express server!');
 });
 
+// In your Express app (e.g., index.js or routes file)
+app.get('/api/test', (req, res) => {
+  res.json({ message: "Back-end connection successful" });
+});
+
 // Additional routes here
 // e.g., app.use('/api/users', usersRoutes);
 
