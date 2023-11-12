@@ -6,7 +6,8 @@ const TestComponent: React.FC = () => {
 
   const testBackendConnection = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/test`);
+      console.log('API URL:', import.meta.env.VITE_API_URL);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/test`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
